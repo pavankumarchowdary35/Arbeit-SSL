@@ -1,0 +1,146 @@
+Files already downloaded and verified
+val_num is  0
+len os train indexes is  50000
+len os val indexes is  0
+self._num is 49500
+len of train_labels is  50000
+len of args.labeled_samples 500
+len is 50000
+self._num is -500
+len of train_labels is  0
+len of args.labeled_samples 500
+len of train_indexes in prepare_Data_Ssl 500
+50000
+train loader is ssl_warmup
+Training to compare to the SOTA --- TESTING MODE ---.
+-------> Data loading
+Training with 500 labeled samples (0 unlabeled samples)
+0
+Loading MT_Net...
+Total params:  3M
+WuP_model 500
+50000
+Training with Mixup and regularization for soft labels and for predicting different classes (MixUp_ep)
+Mixup alpha value:1
+23699
+23044
+24392
+2773
+33364
+14106
+40305
+44115
+29359
+30022
+22653
+24679
+28373
+19113
+32338
+42062
+7478
+18334
+20411
+26955
+11266
+43417
+3051
+28007
+11040
+33020
+5852
+40769
+49210
+12731
+31699
+21043
+10274
+17126
+6999
+4827
+43817
+22430
+15075
+20086
+19422
+1374
+34862
+37395
+41366
+40220
+47598
+19514
+31434
+13334
+2047
+1509
+38242
+14134
+8662
+7960
+40382
+17666
+27006
+26960
+4926
+40059
+37197
+35927
+22728
+21476
+49146
+13923
+15352
+18545
+39665
+42231
+45474
+24387
+21501
+6468
+14289
+48457
+33780
+2728
+28204
+41227
+14685
+4032
+1192
+19545
+3778
+9204
+23482
+20241
+5588
+34366
+28497
+33440
+6542
+30057
+13625
+29761
+39838
+40716
+tensor([23699, 23044, 24392,  2773, 33364, 14106, 40305, 44115, 29359, 30022,
+        22653, 24679, 28373, 19113, 32338, 42062,  7478, 18334, 20411, 26955,
+        11266, 43417,  3051, 28007, 11040, 33020,  5852, 40769, 49210, 12731,
+        31699, 21043, 10274, 17126,  6999,  4827, 43817, 22430, 15075, 20086,
+        19422,  1374, 34862, 37395, 41366, 40220, 47598, 19514, 31434, 13334,
+         2047,  1509, 38242, 14134,  8662,  7960, 40382, 17666, 27006, 26960,
+         4926, 40059, 37197, 35927, 22728, 21476, 49146, 13923, 15352, 18545,
+        39665, 42231, 45474, 24387, 21501,  6468, 14289, 48457, 33780,  2728,
+        28204, 41227, 14685,  4032,  1192, 19545,  3778,  9204, 23482, 20241,
+         5588, 34366, 28497, 33440,  6542, 30057, 13625, 29761, 39838, 40716])
+Traceback (most recent call last):
+  File "train.py", line 420, in <module>
+    main(args)
+  File "train.py", line 279, in main
+    train_time, current_results = train_CrossEntropy(args, model, device, \
+  File "../utils_pseudoLab/utils_ssl.py", line 295, in train_CrossEntropy
+    loss_trades = trades_loss(model=model,
+  File "../utils_pseudoLab/utils_ssl.py", line 104, in trades_loss
+    x_adv = x_natural.detach() + 0.001 * torch.randn(x_natural.shape).cuda().detach()
+  File "/home/g057822/PseudoLabeling-confirmation-bias-1/semi/lib/python3.8/site-packages/torch/cuda/__init__.py", line 298, in _lazy_init
+    torch._C._cuda_init()
+RuntimeError: Found no NVIDIA driver on your system. Please check that you have an NVIDIA GPU and installed a driver from http://www.nvidia.com/Download/index.aspx
